@@ -1,20 +1,20 @@
 # @i/webpack-svgr-plugin
 
-Webpack plugin to run [SVGR](https://github.com/gregberge/svgr). Will watch the input directory during development.
+Webpack plugin to run [SVGR](https://github.com/gregberge/svgr) and watch the directory for changes to rerun as necessary.
 
 
 
 ### Getting Started
 
-Initialize and pass the plugin to Webpack. The plugin will read the `.idsconfig.json` file in the project root.
+Initialize and pass the plugin to Webpack. The plugin will read the `.idsconfig.json` file in the project root. The plugin will use the "icons" property filepath.
 <br>
 
 ```js
 // webpack.config.js
-const IntouchThemePlugin = require('@i/webpack-theme-plugin')
+const IntouchSVGRPlugin = require('@i/webpack-svgr-plugin')
 
 // ...
-webpackPlugins.push(new IntouchThemePlugin())
+webpackPlugins.push(new IntouchSVGRPlugin())
 ```
 <br>
 
@@ -22,10 +22,29 @@ webpackPlugins.push(new IntouchThemePlugin())
 // .idsconfig.json
 {
     "values": "theme/values.json",
-    "groups": "theme/groups.json",
-    "components": "theme/components.json",
     "variants": "theme/variants.json",
+    "icons": "icons",
     "output": "theme/theme.js"
 }
 ```
 <br>
+
+
+
+### Advanced
+
+The plugin constructor accepts a filepath to the `.idsconfig.json` file, and a merge function to update any SVGR option:
+
+```js
+new IntouchSVGRPlugin(
+    '../path/to/idsconfig',
+    (defaultSvgrOptions) => {
+        console.log(defaultSvgrOptions)
+        const newSvgrOptions = defaultSvgrOptions
+
+        // do stuff to manipulate newSvgrOptions here...
+
+        return newSvgrOptions
+    }
+)
+```
