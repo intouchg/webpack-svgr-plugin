@@ -1,6 +1,6 @@
 {
     "name": "@i/webpack-svgr-plugin",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "Webpack plugin to run SVGR",
     "main": "lib/index.js",
     "repository": "https://intazdoweb.intouchsol.com/IntouchDesignSystem/IntouchDesignSystem/_git/webpack-svgr-plugin",
@@ -11,6 +11,7 @@
       "@svgr/core": "5.5.0",
       "@svgr/plugin-jsx": "5.5.0",
       "@svgr/plugin-svgo": "5.5.0",
+      "camelcase": "6.2.0",
       "glob": "7.1.6"
     },
     "devDependencies": {
