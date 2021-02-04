@@ -21,10 +21,7 @@ webpackPlugins.push(new IntouchSVGRPlugin())
 ```jsonc
 // .idsconfig.json
 {
-    "values": "theme/values.json",
-    "variants": "theme/variants.json",
-    "icons": "icons",
-    "output": "theme/theme.js"
+    "icons": "icons"
 }
 ```
 <br>
