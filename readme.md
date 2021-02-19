@@ -28,6 +28,16 @@ webpackPlugins.push(new IntouchSVGRPlugin())
 
 
 
+### Dynamic Properties
+
+* If the SVG file has exactly 1 unique value each for the `fill` and `stroke` properties, those values will be replaced with `inherit` in the generated component output
+
+* If the SVG file has exactly 2 or 3 unique values each for the `fill` and `stroke` properties, those values will be replaced with `fill1`, `fill2`, `fill3` and/or `stroke1`, `stroke2`, `stroke3`
+
+Note: Uniqueness of `fill` and `stroke` values are considered separately - so dynamic props will still be generated if your `fill` values are red, green, and blue while your `stroke` values are orange, purple, and pink (6 unique values in total).
+
+
+
 ### Advanced
 
 The plugin constructor accepts a filepath to the `.idsconfig.json` file, and a merge function to update any SVGR option:
