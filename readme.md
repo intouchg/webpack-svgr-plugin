@@ -32,7 +32,7 @@ webpackPlugins.push(new IntouchSVGRPlugin())
 
 * If the SVG file has exactly 1 unique value each for the `fill` and `stroke` properties, those values will be replaced with `inherit` in the generated component output
 
-* If the SVG file has exactly 2 or 3 unique values each for the `fill` and `stroke` properties, those values will be replaced with `fill1`, `fill2`, `fill3` and/or `stroke1`, `stroke2`, `stroke3`
+* If the SVG file has exactly 2 or 3 unique values each for the `fill` and `stroke` properties, those values will be replaced with `fill1 || 'inherit'`, `fill2 || 'inherit'`, etc. and `stroke1 || 'inherit'` etc.
 
 Note: Uniqueness of `fill` and `stroke` values are considered separately - so dynamic props will still be generated if your `fill` values are red, green, and blue while your `stroke` values are orange, purple, and pink (6 unique values in total).
 
