@@ -27,8 +27,36 @@ webpackPlugins.push(new IntouchSVGRPlugin())
 <br>
 
 
+### React Children
 
-### Dynamic Properties
+Generated React icon components will render the `children` prop as the first child inside the component, without replacing the other child elements. This is useful for passing elements such as `title` for accessibility:
+
+```jsx
+<IntouchLogoIcon
+    role="img"
+    width="200px"
+    fill="#b2d236"
+>
+    <title>
+        Intouch Logo Icon
+    </title>
+</IntouchLogoIcon>
+```
+<br>
+
+
+### Disabling Dynamic Properties
+
+* **DISABLING**: Turn off "dynamic property" replacement by adding a `// svgr-disable-dynamic-props` comment block to the source SVG file:
+```html
+<!-- // svgr-disable-dynamic-props -->
+```
+<br>
+
+
+## Dynamic Properties
+
+"Dynamic properties" are enabled by default. When enabled, the `fill` and `stroke` properties from the source SVG file are replaced by React component props as follows:
 
 * If the SVG file has exactly 1 unique value each for the `fill` and `stroke` properties, those values will be replaced with `inherit` in the generated component output
 
