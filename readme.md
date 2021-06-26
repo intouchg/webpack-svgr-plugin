@@ -54,7 +54,7 @@ Generated React icon components will render the `children` prop as the first chi
 <br>
 
 
-## Dynamic Properties
+### Dynamic Properties
 
 "Dynamic properties" are enabled by default. When enabled, the `fill` and `stroke` properties from the source SVG file are replaced by React component props as follows:
 
