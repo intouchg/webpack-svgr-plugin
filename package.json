@@ -1,6 +1,6 @@
 {
     "name": "@i/webpack-svgr-plugin",
-    "version": "0.0.19",
+    "version": "0.0.20",
     "description": "Webpack plugin to run SVGR, and watch the directory for changes to rerun as necessary",
     "main": "lib/index.js",
     "repository": "https://intazdoweb.intouchsol.com/IntouchDesignSystem/IntouchDesignSystem/_git/webpack-svgr-plugin",

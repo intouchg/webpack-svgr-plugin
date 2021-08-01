@@ -73,7 +73,7 @@ The plugin constructor accepts a filepath to the `.idsconfig.json` file, an opti
 ```js
 new IntouchSVGRPlugin(
     '../path/to/idsconfig',
-    { useSvgComponent: false }, // module options
+    { scss: true }, // module options
     (defaultSvgrOptions) => {
         console.log(defaultSvgrOptions)
         const newSvgrOptions = defaultSvgrOptions
