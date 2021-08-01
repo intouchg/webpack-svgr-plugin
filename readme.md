@@ -68,11 +68,12 @@ Note: Uniqueness of `fill` and `stroke` values are considered separately - so dy
 
 ### Advanced
 
-The plugin constructor accepts a filepath to the `.idsconfig.json` file, and a merge function to update any SVGR option:
+The plugin constructor accepts a filepath to the `.idsconfig.json` file, an options object that's specific to this module, and a merge function to update any SVGR option:
 
 ```js
 new IntouchSVGRPlugin(
     '../path/to/idsconfig',
+    { useSvgComponent: false }, // module options
     (defaultSvgrOptions) => {
         console.log(defaultSvgrOptions)
         const newSvgrOptions = defaultSvgrOptions
