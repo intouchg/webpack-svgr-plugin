@@ -1,6 +1,6 @@
-# @i/webpack-svgr-plugin
+# @intouchg/webpack-svgr-plugin
 
-Webpack plugin to run [SVGR](https://github.com/gregberge/svgr) and watch the directory for changes to rerun as necessary.
+Webpack plugin to run [SVGR](https://github.com/gregberge/svgr) for the [Intouch Design System](https://ids.intouchg.co/). Watches the directory for changes to rerun as necessary.
 
 
 
@@ -11,7 +11,7 @@ Initialize and pass the plugin to Webpack. The plugin will read the `.idsconfig.
 
 ```js
 // webpack.config.js
-const IntouchSVGRPlugin = require('@i/webpack-svgr-plugin')
+const IntouchSVGRPlugin = require('@intouchg/webpack-svgr-plugin')
 
 // ...
 webpackPlugins.push(new IntouchSVGRPlugin())
